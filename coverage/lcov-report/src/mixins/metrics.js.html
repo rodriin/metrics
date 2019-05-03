@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/mixins/metrics.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/mixins</a> metrics.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default {
+    methods: {
+        // transforms metrics API responses to datasets appropriate for chart.js
+        cpuTransformer(res) {
+            const labels = <span class="cstat-no" title="statement not covered" >{</span>
+                sys: 'System',
+                user: 'User',
+                idle: 'Misc',
+            };
+            const colors = <span class="cstat-no" title="statement not covered" >{</span>
+                sys: '#d9534f',
+                user: '#f2c144',
+                idle: '#4da74d',
+            };
+<span class="cstat-no" title="statement not covered" >            return res.map(<span class="fstat-no" title="function not covered" >ser</span> =&gt; {</span>
+                const data = (<span class="cstat-no" title="statement not covered" >ser.data || []);</span>
+                let cleaned;
+<span class="cstat-no" title="statement not covered" >                if (ser.label === 'idle') {</span>
+<span class="cstat-no" title="statement not covered" >                    cleaned = data.map(<span class="fstat-no" title="function not covered" >(p</span>t,i) =&gt; {</span>
+                        const idle = <span class="cstat-no" title="statement not covered" >pt[1]</span>
+                        const user = <span class="cstat-no" title="statement not covered" >res[0].data[i][1];</span>
+                        const sys = <span class="cstat-no" title="statement not covered" >res[1].data[i][1];</span>
+<span class="cstat-no" title="statement not covered" >                        return {</span>
+                            x: pt[0],
+                            y: Math.max(1 - idle - (user+sys), 0),
+                        };
+                    });
+                } else {
+<span class="cstat-no" title="statement not covered" >                    cleaned = data.map(this.genericPointTransformer);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return {</span>
+                    label: labels[ser.label],
+                    pointRadius: 0,
+                    borderWidth: 0,
+                    backgroundColor: colors[ser.label],
+                    data: cleaned,
+                };
+            });
+        },
+&nbsp;
+        ramTransformer(res) {
+            const labels = <span class="cstat-no" title="statement not covered" >{</span>
+                used: 'Cached',
+                actualused: 'Used',
+            };
+            const colors = <span class="cstat-no" title="statement not covered" >{</span>
+                actualused: 'steelblue',
+                used: 'lightblue',
+            }
+<span class="cstat-no" title="statement not covered" >            return res.map(<span class="fstat-no" title="function not covered" >ser</span> =&gt; {</span>
+                const data = (<span class="cstat-no" title="statement not covered" >ser.data || []);</span>
+                let cleaned;
+<span class="cstat-no" title="statement not covered" >                if (ser.label === 'used') {</span>
+<span class="cstat-no" title="statement not covered" >                    cleaned = data.map(<span class="fstat-no" title="function not covered" >(p</span>t,i) =&gt; {</span>
+                        const used = <span class="cstat-no" title="statement not covered" >pt[1];</span>
+                        const actualused = <span class="cstat-no" title="statement not covered" >res[0].data[i][1];</span>
+<span class="cstat-no" title="statement not covered" >                        return {</span>
+                            x: pt[0],
+                            y: used === 'NaN' ? NaN : used - actualused,
+                        };
+                    });
+                } else {
+<span class="cstat-no" title="statement not covered" >                    cleaned = data.map(this.genericPointTransformer);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return {</span>
+                    label: labels[ser.label],
+                    pointRadius: 0,
+                    borderWidth: 0,
+                    backgroundColor: colors[ser.label],
+                    data: cleaned,
+                };
+            });
+        },
+&nbsp;
+        genericPointTransformer(pt) {
+<span class="cstat-no" title="statement not covered" >            return {x: pt[0], y: pt[1] === 'NaN' ? NaN : pt[1] };</span>
+        },
+        usersTransformer(res) {
+            // labels for both the licensed users and shiny users graphs
+            const labels = <span class="cstat-no" title="statement not covered" >{</span>
+                active1day: 'Past Day',
+                active30day: 'Past Month',
+                active365day: 'Past Year',
+                shinyusers: 'Active Connections',
+            };
+            const colors = <span class="cstat-no" title="statement not covered" >{</span>
+                active1day: 'rgb(31, 119, 180)',
+                active30day: 'rgb(174, 199, 234)',
+                active365day: 'rgb(255, 126, 0)',
+                shinyusers: 'rgb(28, 119, 183)',
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return res.map(<span class="fstat-no" title="function not covered" >ser</span> =&gt; {</span>
+                const data = (<span class="cstat-no" title="statement not covered" >ser.data || []);</span>
+<span class="cstat-no" title="statement not covered" >                return {</span>
+                    label: labels[ser.label],
+                    pointRadius: 0,
+                    borderWidth: 0,
+                    fill: false,
+                    borderColor: colors[ser.label],
+                    backgroundColor: colors[ser.label],
+                    data: data.map(this.genericPointTransformer),
+                };
+            });
+        },
+    }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 20 2019 17:12:57 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

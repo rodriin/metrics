@@ -15,7 +15,8 @@
 <script>
 import MetricsGraph from '@/components/MetricsGraph';
 import consts from '@/common/metrics';
-import { mapGetters } from 'vuex';
+import vuex from 'vuex'
+const { mapGetters } = vuex;
 
 export default {
   name: "Metrics",
@@ -27,6 +28,7 @@ export default {
         userRole: 'user/getRole',
     }),
     isAdmin() {
+      console.log(this.$store._wrappedGetters.getCpuData(vuex));
       return this.userRole === 'administrator';
     }
   },
